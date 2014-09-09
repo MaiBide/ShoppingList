@@ -1,0 +1,246 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*These rules make  code cross-browser compatible*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*-----------------Webpage styling starts here---------------*/
+/*body *{
+    border: 1px dashed red;
+}*/
+/*section *{
+    border: 1px dashed red;
+}*/
+/*div{
+    border: 2px solid black;
+}*/
+/*span{
+    border: 1px dashed black;
+}*/
+
+body {
+    top: 0;
+    min-width: 1050px;/*based on min-width of #companyInfo;it has max min-width*/
+    box-shadow: #000 0px 0px 900px;
+    height: 98%;
+    font-size:22px;
+    font-weight:bold;
+}
+/*-------Shopping-List Header ---------*/
+header {
+    /*min-width: 1100px;*/
+    background-color: blue;/*#16F;*/
+    /*background: rgba(0, 0, 0, .1);*/
+    padding: 9px;
+    padding-top: 25px;
+    box-shadow: inset #000 0px 1px 2px;
+    /*font-size:14px;class diff from header*/
+    height: 70px;/*8%;*/
+}
+#quizHeader{
+    border-radius:5px;
+    width: inherit;
+    height: inherit;
+    margin-top:-20px;
+    text-align:center;
+  }
+#quizHeaderName{
+    /*font-size: 40px;
+    vertical-align: middle;*/
+    color: white;
+    font-size:50px;
+    font-weight: bold;
+    display:block;
+    margin:0;
+    padding: 0;
+    margin-top:-0px;
+ }
+ #quizHeaderPhrase{
+    /*color: black;
+    font-size: 20px;*/
+    color: white;
+    font-weight: bold;
+    display:block;
+    margin:0;
+    padding: 0;
+    font-size: 20px;
+ }
+  #quizLogo{
+  	height: inherit;
+  	float:left;
+ }
+ 
+/*-------Shopping-List Body ---------*/
+#sLBody{
+    background-color:rgb(0,0,0);
+    height:750px;
+    overflow:auto;
+}
+#sLBody h3{
+    text-align:center;
+    font-size:25px;
+    margin-top: 20px;
+    padding: 0px;
+    border: 0px;
+}
+/*#sLBody ul{
+     font-size:20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 10px;
+    line-height: 35px;
+    text-indent:40px;
+}*/
+.shoppingList{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid white;
+    margin-top: 10px;
+    text-align:center;
+    background-color:rgb(192,192,192);
+    width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inputItem{
+    font-size: 20px;
+    font-family:"Times New Roman";
+ }
+
+.allListItems{
+    width: inherit;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.itemList{
+    margin-bottom: 0px;
+    border: 2px solid blue;
+ }
+.itemName{
+    /*font-family:"Gloria Hallelujah";not recognizede*/
+    display:inline-block;
+    font-size: 20px;
+    width: 28em;
+    margin-left: auto;
+    margin-right: auto;
+    margin:0;
+    background-color:rgb(0,255,255);
+}
+.crossOut{
+    text-decoration:line-through;
+    background-color:red;
+}
+.del{
+    float: right;
+}
+.xOutUnDo{
+    float: right;
+}
+.itemNum{
+    float: left;
+}
+/*-------Shopping-List Footer ---------*/
+/*footer *{
+    border: 1px dashed black;
+    border-radius: 10px;
+}*/
+footer {
+    background-color: #16F;
+    background: rgba(0, 0, 0, .3);
+    padding: 9px;
+    padding-top: 25px;
+    box-shadow: inset #000 0px 1px 2px;
+    font-size:16px;/*Frm here, diff from header*/
+    margin-top:0px;
+    height: 25px;s
+    border-radius: 0, 0;
+ }
+
+ #companyInfo{
+    position: relative;
+    float: left;
+    margin-left: .5%;
+    text-align:left;/*right;*/
+ }
+   .coInfo1{
+    position: relative;
+    display:inline-block;
+    margin-top:0px;
+    margin-right:11px;
+    margin-left:11px;
+ }
+ #coEmail{
+    /*position: relative;
+    display:inline-block;
+    margin-top:0px;*/
+    color:black;
+    margin-right:15px;
+    margin-left:11px;
+    text-decoration: none;
+ }
+ #coEmail:hover {
+    text-decoration: underline;
+}/**/
+ 
+ .coInfo2{
+    /*position: relative;
+    display:inline-block;
+    margin-top:0px;*/
+    margin-right:0px;
+    margin-left:35px;
+    text-decoration: none;
+ }
+ .coInfo2:hover {
+    text-decoration: underline;
+ }
+
+
+
+
+
