@@ -30,7 +30,9 @@ $(document).ready(function(){
   });
   
   $('ul').on('click', '.xOutUnDo', function() {
-    if(itemNum != 0){$(this).closest('p').toggleClass("crossOut");}
+    //if(itemNum != 0){$(this).closest('p').toggleClass("crossOut");}
+    if(itemNum != 0){$(this).siblings('p').toggleClass("crossOut");}
+
   });/**/
 
   $('div').on('click', '.clearList', function() {

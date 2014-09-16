@@ -160,7 +160,7 @@ header {
 
 .itemList{
     margin-bottom: 0px;
-    border: 2px solid blue;
+    border: .05px solid blue;
  }
 .itemName{
     /*font-family:"Gloria Hallelujah";not recognizede*/
