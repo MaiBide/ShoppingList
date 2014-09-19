@@ -20,6 +20,14 @@ $(document).ready(function(){
   $(".inputButton").click (function(){//H1: frm "http://bacalj.github.io/shop2/"
     populateShoppingList();
   });
+  $('.inputItem').keypress(function(event){
+ 
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+      populateShoppingList();  
+  }
+ 
+});
 
   $('ul').on('click', '.del', function() {
     if(itemNum != 0){$(this).closest('li').remove();}
