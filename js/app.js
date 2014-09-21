@@ -10,7 +10,7 @@
 /*---Global Variables ---*/
 var itemNum = 0;
 $(".clearList").hide();
-var my_text0="Your List is empty."
+var my_text0="List is empty."
 
 /*Start javascript execution after DOM loaded*/
 $(document).ready(function(){
@@ -20,6 +20,14 @@ $(document).ready(function(){
   $(".inputButton").click (function(){//H1: frm "http://bacalj.github.io/shop2/"
     populateShoppingList();
   });
+  $('.inputItem').keypress(function(event){
+ 
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+      populateShoppingList();  
+  }
+ 
+});
 
   $('ul').on('click', '.del', function() {
     if(itemNum != 0){$(this).closest('li').remove();}
@@ -30,7 +38,9 @@ $(document).ready(function(){
   });
   
   $('ul').on('click', '.xOutUnDo', function() {
-    if(itemNum != 0){$(this).closest('p').toggleClass("crossOut");}
+    //if(itemNum != 0){$(this).closest('p').toggleClass("crossOut");}
+    if(itemNum != 0){$(this).siblings('p').toggleClass("crossOut");}
+
   });/**/
 
   $('div').on('click', '.clearList', function() {
@@ -79,8 +89,9 @@ $(document).ready(function(){
       }
       $(".inputItem").attr("placeholder","Next item");
       $(".inputItem").val("");
+      $(".inputItem").focus(); 
     }
-    else{alert("To and a product, first type the name.")}
+    //else{alert("To and a product, first type the name.")}
   }
   
 
