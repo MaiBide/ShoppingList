@@ -75,7 +75,7 @@ $(document).ready(function(){
     return listObj;
   }
   var populateShoppingList= function() {
-    itemNum++;
+    
     var True =0;
     var my_text = $(".inputItem").val();
     for (var i = my_text.length-1; i >= 0; i--) {
@@ -85,6 +85,7 @@ $(document).ready(function(){
     var listObj = getItemElement(my_text);//used to detect only inputed space
     //if (my_text!=""&&my_text_str!=" "){
     if (True){  
+      itemNum++;
       if(itemNum==1){
           $(".allListItems").html(listObj);
           $(".clearList").show();
@@ -96,6 +97,7 @@ $(document).ready(function(){
       $(".inputItem").val("");
       $(".inputItem").focus(); 
     }
+    $(".inputItem").focus();
     //else{alert("To and a product, first type the name.")}
   }
   
