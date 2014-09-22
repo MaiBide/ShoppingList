@@ -76,10 +76,15 @@ $(document).ready(function(){
   }
   var populateShoppingList= function() {
     itemNum++;
+    var True =0;
     var my_text = $(".inputItem").val();
-    //var listObj0 = "li class=\"itemList\"";
-    var listObj = getItemElement(my_text);
-    if (my_text!=""){
+    for (var i = my_text.length-1; i >= 0; i--) {
+      if(my_text.substring(i,(i+1)) !=" "){ True=1;}
+    };
+    //var my_text_str = my_text.substring(0,1);
+    var listObj = getItemElement(my_text);//used to detect only inputed space
+    //if (my_text!=""&&my_text_str!=" "){
+    if (True){  
       if(itemNum==1){
           $(".allListItems").html(listObj);
           $(".clearList").show();
